@@ -1,0 +1,20 @@
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('layout/grid.css');
+@import url('layout/header-footer.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/feedback.css');
+
+/* Tipografia global */
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+p, li { line-height: 1.6; }
