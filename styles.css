@@ -86,13 +86,14 @@ html, body {
 }
 
 /* Conteúdo Principal */
-h1 { font-size: var(--font-size-xxl); }
-h2 { font-size: var(--font-size-xl); }
-h3 { font-size: var(--font-size-lg); }
-p, li { line-height: 1.6; }
+h1 { font-size: var(--font-size-xxl); margin-bottom: var(--space-2); }
+h2 { font-size: var(--font-size-xl); margin-bottom: var(--space-2); }
+h3 { font-size: var(--font-size-lg); margin-bottom: var(--space-2); }
+p, li { line-height: 1.6; margin-bottom: var(--space-2); }
 
 .hero {
   padding: var(--space-4) 0;
+  text-align: center;
 }
 
 /* Cards */
@@ -104,6 +105,7 @@ p, li { line-height: 1.6; }
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 
 .card img {
@@ -115,19 +117,40 @@ p, li { line-height: 1.6; }
 /* Formulários */
 form {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 1px solid #e6e6e6;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 var(--space-1);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
 }
 
 input, select, textarea {
   width: 100%;
   border: 1px solid #ccc;
-  padding: var(--space-1);
+  padding: var(--space-2);
   border-radius: var(--radius-sm);
   font: inherit;
+  margin-bottom: var(--space-2);
 }
 
 input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 button {
@@ -138,17 +161,42 @@ button {
   padding: var(--space-2) var(--space-3);
   cursor: pointer;
   font: inherit;
+  font-weight: 600;
+  transition: background 0.2s;
 }
 
 button:hover {
   background: var(--color-primary-light);
 }
 
+/* Footer */
+.site-footer {
+  background: var(--color-secondary);
+  color: white;
+  text-align: center;
+  padding: var(--space-3) 0;
+  margin-top: var(--space-4);
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
+    gap: var(--space-1);
   }
+  
+  .container {
+    padding: var(--space-2);
+  }
+  
+  form {
+    gap: var(--space-2);
+  }
+  
+  fieldset {
+    padding: var(--space-2);
+  }
+}
   
   .container {
     padding: var(--space-1);
