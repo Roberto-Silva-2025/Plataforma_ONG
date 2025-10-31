@@ -8,4 +8,3 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--color-primary);
 }
-
